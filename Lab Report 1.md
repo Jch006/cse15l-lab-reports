@@ -7,7 +7,7 @@
 [user@sahara ~/lecture1]$ cd
 [user@sahara ~]$ cd
 ```
-When using cd without an argument, if there is a working directory, it is changed back to default directory, and if the current directory is default, the command does nothing.
+When using cd without an argument, if there is a working directory, it is changed back to the home directory, and if the current directory is already the home directory, the command still takes you to the home directory, but there is no change in the working directory since you are already in the home directory.
 
 **Directory as argument**
 ```
@@ -54,16 +54,17 @@ When using ls with a file as an argument, the file itself is listed, as shown in
 **No argument**
 ```
 [user@sahara ~/lecture1]$ cat
-
+hi
+hi
 ```
-When using cat without an argument, there is no output and the working directory is removed.
+When using cat without an argument, the terminal accepts user input, and returns the input as an output. In the example above, after typing cat, then typing hi, the cat command returned hi as an output.
 
 **Directory as argument**
 ```
 [user@sahara ~/lecture1]$ cat messages/
 cat: messages/: Is a directory
 ```
-When using cat with a directory as an argument, there is a message saying the argument is a directory, hence nothing is being printed.
+When using cat with a directory as an argument, an error occurs, since for the cat command to work properly, a file is expected as an input. So as seen in the example above, there is a message saying the argument is a directory, as the directory messages is not a file. 
 
 **File as argument**
 ```
