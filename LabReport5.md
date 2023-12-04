@@ -25,6 +25,8 @@ The bug was a misplaced bracket, causing list1 to always be appended after the f
 
 Command to trigger the bug: ```bash test.sh```
 
+To fix the bug, move the bracket right above ```return result;``` to above the second ```while``` loop.
+
 
 
 ## Part 2
